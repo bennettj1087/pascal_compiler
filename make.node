@@ -1,0 +1,8 @@
+node_driver: node_driver.o node.o
+	gcc -g -o node_driver node_driver.o node.o
+node_driver.o: node_driver.c
+	gcc -g -c node_driver.c
+node.o: node.c
+	gcc -g -c node.c
+clean:
+	rm -f *.o node_driver *~

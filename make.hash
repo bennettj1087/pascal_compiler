@@ -1,0 +1,10 @@
+hash_driver: hash_driver.o hash.o node.o
+	gcc -g -o hash_driver hash_driver.o hash.o node.o
+hash_driver.o: hash_driver.c
+	gcc -g -c hash_driver.c
+hash.o: hash.c
+	gcc -g -c hash.c
+node.o: node.c
+	gcc -g -c node.c
+clean:
+	rm -f *.o hash_driver *~
